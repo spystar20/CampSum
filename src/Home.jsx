@@ -48,37 +48,103 @@ const Home = () => {
   <div className='grid grid-cols-3 gap-10'>
     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
  <div className='row-start-1 col-start-1'>  <img className='rounded-2xl' src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="" /></div>
-   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-6 px-3 shadow-lg capitalize'>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
     <span className='text-left capitalize flex flex-col gap-1 '>
     <h6 className='text-lg font-semibold'>accommodation</h6>
-    <p className='text-sm'>Find perfect housing options near your campus</p>
+    <p className='text-xs'>Find perfect housing options near your campus</p>
 </span>
 <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
    </div>
     </div>
   <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
- <div className='row-start-1 col-start-1'>  <img className='rounded-2xl' src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="" /></div>
-   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-6 px-3 shadow-lg capitalize'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/736x/cb/73/85/cb73854cb56a4afd0ef0e118bd1f440a.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
     <span className='text-left capitalize flex flex-col gap-1 '>
-    <h6 className='text-lg font-semibold'>accommodation</h6>
-    <p className='text-sm'>Find perfect housing options near your campus</p>
+    <h6 className='text-lg font-semibold'>Tiffin Services</h6>
+    <p className='text-xs'>Healthy, affordable meal delivery to your doorstep</p>
 </span>
-<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>Explore </button></span>
    </div>
     </div>
 
   <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
- <div className='row-start-1 col-start-1'>  <img className='rounded-2xl' src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="" /></div>
-   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-6 px-3 shadow-lg capitalize'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/736x/f5/98/37/f598376ed7baf8eba373ad9def70c2e7.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
     <span className='text-left capitalize flex flex-col gap-1 '>
-    <h6 className='text-lg font-semibold'>accommodation</h6>
-    <p className='text-sm'>Find perfect housing options near your campus</p>
+    <h6 className='text-lg font-semibold'>Marketplace</h6>
+    
+    <p className='text-xs'>Buy, sell, and exchange items with fellow students</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+   </div>
+    </div>
+     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/736x/73/16/97/731697342b5b04cba8ca116028bf6012.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Mental Health Support</h6>
+    
+    <p className='text-xs'>Professional counseling and wellness resources</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+   </div>
+    </div>
+     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/1200x/1e/a2/6d/1ea26dc520337a320781557786eb2597.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Lost and Found</h6>
+    
+    <p className='text-xs'>Recover lost items or help others find theirs</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+   </div>
+    </div>
+     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/1200x/a2/c3/0d/a2c30db5b264b69e7583cf64838fbfec.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Roommate Finder</h6>
+    
+    <p className='text-xs'>Connect with compatible roommates and flatmates</p>
 </span>
 <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
    </div>
     </div>
 
-
+ <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/1200x/c9/d3/de/c9d3deb19915ad48a363a460f2a9bd76.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Rakt Connect</h6>
+    
+    <p className='text-xs'>Book Blood Donation Appointment</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+   </div>
+    </div>
+     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/1200x/12/22/31/122231d3137e5eb5c804b13465d208f2.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Student Discount</h6>
+    
+    <p className='text-xs'>Exclusive deals and offers for university students</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>explore</button></span>
+   </div>
+    </div>
+     <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+ <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/1200x/cb/7b/c9/cb7bc9d4fffcfac5aef3c6bb35f7c118.jpg" alt="" /></div>
+   <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+    <span className='text-left capitalize flex flex-col gap-1 '>
+    <h6 className='text-lg font-semibold'>Events & Updates</h6>
+    
+    <p className='text-xs'>Stay updated with campus events and important notices</p>
+</span>
+<span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
+   </div>
+    </div>
   </div>
 
 
