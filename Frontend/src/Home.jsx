@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -46,7 +47,7 @@ const Home = () => {
 
   </div>
   <div className='grid grid-cols-3 gap-10'>
-    <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
+   <Link to={"/accomendation"}> <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
  <div className='row-start-1 col-start-1'>  <img className='rounded-2xl' src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="" /></div>
    <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
     <span className='text-left capitalize flex flex-col gap-1 '>
@@ -55,7 +56,7 @@ const Home = () => {
 </span>
 <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
    </div>
-    </div>
+    </div></Link>
   <div className='grid items-end capitalize hover:-translate-y-2 transition-all ease-out  duration-200'>
  <div className='row-start-1 col-start-1'>  <img className='rounded-2xl aspect-3/2' src="https://i.pinimg.com/736x/cb/73/85/cb73854cb56a4afd0ef0e118bd1f440a.jpg" alt="" /></div>
    <div className='flex justify-between items-center gap-4 row-start-1 col-start-1   text-white  relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
