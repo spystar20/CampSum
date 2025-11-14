@@ -149,7 +149,7 @@ const Home = () => {
 
 
 </div>
-<section className="py-20 bg-gradient-to-r from-[#48BAFC] via-[#2C8EE8] to-[#1B6CC9] text-white text-center">
+<section className="py-20  from-[#48BAFC] via-[#2C8EE8] to-[#1B6CC9] text-white text-center">
   <div className="max-w-4xl mx-auto px-6">
     <h2 className="text-4xl font-bold mb-4">Ready to Simplify Your Student Life?</h2>
     <p className="text-lg mb-8 text-white/90">
