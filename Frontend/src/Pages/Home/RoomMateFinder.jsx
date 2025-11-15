@@ -84,7 +84,7 @@ export default function RoommateFinderCard({ item }) {
       </div>
 
       {/* Button */}
-      <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-2.5 rounded-xl font-medium shadow hover:opacity-90 transition flex items-center justify-center gap-2">
+      <button className="w-full bg-linear-to-r from-green-600 to-emerald-600 text-white py-2.5 rounded-xl font-medium shadow hover:opacity-90 transition flex items-center justify-center gap-2">
         Contact Now
       </button>
     </motion.div>

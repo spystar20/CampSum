@@ -91,7 +91,7 @@ export default function TiffinServiceCard({ item }) {
       </div>
 
       {/* Button */}
-      <button className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-2.5 rounded-xl font-medium shadow hover:opacity-90 transition flex items-center justify-center gap-2">
+      <button className="w-full from-orange-600 to-red-600 text-white py-2.5 rounded-xl font-medium shadow hover:opacity-90 transition flex items-center justify-center gap-2">
         Contact Provider
       </button>
     </motion.div>
