@@ -119,14 +119,14 @@ export default function RaktConnect() {
   };
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+    <div className="p-4 sm:p-6 lg:p-8 bg-linear-to-br from-blue-50 via-white to-red-50 min-h-screen">
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-8"
       >
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl font-bold bg-linear-to-r from-red-500 to-blue-600 bg-clip-text text-transparent">
           RaktConnect
         </h1>
         <p className="mt-2 text-gray-600">Students saving lives — one donation at a time</p>

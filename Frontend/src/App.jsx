@@ -14,8 +14,9 @@ import  MentalHealthSupportList  from './Pages/Home/MentalHealthSupport';
 import RakhConnect from './Pages/Home/RakhConnect';
 import  RoommateFinderList from './Pages/Home/RoomMateFinder';
 import StudentDiscount from './Pages/Home/StudentDiscount';
-import  TiffinServicesList  from './Pages/Home/TiffinServices';
+
 import CommunityFeed from './Pages/Home/Community';
+import { TiffinServicesList } from './Pages/Home/TiffinServices';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

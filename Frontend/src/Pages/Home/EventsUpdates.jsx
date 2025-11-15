@@ -116,7 +116,7 @@ export default function EventsUpdates() {
   };
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+    <div className="p-4 sm:p-6 lg:p-8 bg-linear-to-br from-blue-50 via-white to-red-50 min-h-screen">
       {/* Search + Filter */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

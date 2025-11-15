@@ -1,9 +1,13 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Utensils, MapPin, IndianRupee, Phone, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
-// Dummy Data (Top)
-const tiffinServices = [
+// Dummy Data
+export const tiffinServices = [
   {
     name: "Maa Ki Rasoi Tiffin Service",
     description:
@@ -47,60 +51,64 @@ export default function TiffinServiceCard({ item }) {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ y: -6 }}
       className="bg-white rounded-2xl shadow-xl border border-gray-200 p-5 hover:shadow-2xl transition-all duration-300"
     >
       {/* Image */}
       <div className="w-full h-52 rounded-xl overflow-hidden mb-4">
-        <img
+        <motion.img
           src={item.image}
           alt={item.name}
-          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover"
+          whileHover={{ scale: 1.06 }}
+          transition={{ duration: 0.4 }}
         />
       </div>
 
       {/* Content */}
-      <h2 className="text-xl font-semibold text-gray-900 mb-1">{item.name}</h2>
-      <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+      <h2 className="text-xl font-semibold text-blue-900 mb-1">{item.name}</h2>
+      <p className="text-gray-600 text-sm mb-3 line-clamp-3">{item.description}</p>
 
-      <div className="space-y-2 text-sm text-gray-600 mb-4">
+      <div className="space-y-2 text-sm text-gray-700 mb-4">
         <div className="flex items-center gap-2">
-          <MapPin size={18} /> {item.location}
+          <MapPin size={18} className="text-red-400" /> {item.location}
         </div>
         <div className="flex items-center gap-2">
-          <IndianRupee size={18} /> {item.price}
+          <IndianRupee size={18} className="text-blue-400" /> {item.price}
         </div>
         <div className="flex items-center gap-2">
           <Star size={18} className="text-yellow-500" /> {item.rating} / 5
         </div>
         <div className="flex items-center gap-2">
-          <Phone size={18} /> {item.contact}
+          <Phone size={18} className="text-green-500" /> {item.contact}
         </div>
       </div>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-4">
         {item.tags.map((tag, idx) => (
-          <span
+          <Badge
             key={idx}
-            className="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full flex items-center gap-1"
+            variant="secondary"
+            className="bg-blue-100 text-blue-600 border border-blue-200 flex items-center gap-1"
           >
             <Utensils size={14} /> {tag}
-          </span>
+          </Badge>
         ))}
       </div>
 
       {/* Button */}
-      <button className="w-full from-orange-600 to-red-600 text-white py-2.5 rounded-xl font-medium shadow hover:opacity-90 transition flex items-center justify-center gap-2">
+      <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl">
         Contact Provider
-      </button>
+      </Button>
     </motion.div>
   );
 }
 
 export function TiffinServicesList() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {tiffinServices.map((item, index) => (
         <TiffinServiceCard key={index} item={item} />
       ))}

@@ -33,7 +33,7 @@ const SideMenu = ({ isOpen, onClose }) => {
         <div className="p-6">
           <Link to="/" className="flex items-center gap-2 mb-8">
             <img src="/src/assets/logo.png" alt="CampSum Logo" className="h-8" />
-            <span className="text-2xl font-bold text-gray-800">CampSum</span>
+          
           </Link>
           <nav className="flex flex-col gap-2">
             {menuItems.map((item) => (

@@ -1,38 +1,79 @@
-import React from 'react'
-import logo from '../assets/logo.png'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+} from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <div>
-        <footer className="bg-[#001F3F] text-gray-300  p-6">
- 
-    
+    <footer className="w-full bg-[#0F172A] text-gray-300 py-12 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
 
-      <div className='flex flex-col items-center '>
-        <img src={logo} alt="" className='max-w-1/12'/>
-      <p className="text-sm text-gray-400">
-       Making student life easier, one service at a time
-      </p>
+        {/* Learn More */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Learn More
+          </h3>
+          <ul className="space-y-2">
+            <li className="hover:text-blue-400 cursor-pointer">About Us</li>
+            <li className="hover:text-blue-400 cursor-pointer">Services</li>
+            <li className="hover:text-blue-400 cursor-pointer">Terms & Conditions</li>
+            <li className="hover:text-blue-400 cursor-pointer">Privacy Policy</li>
+          </ul>
+        </div>
+
+        {/* Social Connect */}
+        <div className="flex flex-col items-center">
+          <h3 className="text-lg font-semibold text-white mb-2">
+            Connect with <span className="text-red-400">Camp</span>
+            <span className="text-blue-400">Sum</span>
+          </h3>
+
+          <p className="text-gray-400 mb-4 max-w-sm">
+            Follow us for updates, tips, and student community stories.
+          </p>
+
+          {/* Social Icons */}
+          <div className="flex gap-4">
+            <SocialIcon icon={<Instagram />} bg="from-pink-500 to-purple-500" />
+            <SocialIcon icon={<MessageCircle />} bg="bg-green-500" />
+            <SocialIcon icon={<Mail />} bg="bg-red-500" />
+            <SocialIcon icon={<Linkedin />} bg="bg-blue-600" />
+            <SocialIcon icon={<Facebook />} bg="bg-blue-500" />
+          </div>
+        </div>
+
+        {/* Explore Services */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Explore Services
+          </h3>
+          <ul className="space-y-2">
+            <li className="hover:text-blue-400 cursor-pointer">Our Services</li>
+            <li className="hover:text-blue-400 cursor-pointer">Help</li>
+            <li className="hover:text-blue-400 cursor-pointer">Contact Us</li>
+          </ul>
+        </div>
       </div>
-   
 
- 
-<div className='flex justify-between items-center border-t border-gray-700 mt-5 pt-6 '>
-
-  <div className="text-center text-sm text-gray-500">
-    © 2025 Campsum. All rights reserved.
-  </div>
-      <div className="flex space-x-5  text-2xl rounded-full">
-        <a href="#" className="hover:text-[#48BAFC] transition"><FaInstagram/></a>
-        <a href="#" className="hover:text-[#48BAFC] transition"><FaFacebook/></a>
-        <a href="#" className="hover:text-[#48BAFC] transition"><FaTwitter/></a>
+      {/* Bottom Line */}
+      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400">
+        © 2025{" "}
+        <span className="text-red-400 font-semibold">Camp</span>
+        <span className="text-blue-400 font-semibold">Sum</span>. Making student life easier, one service at a time. ❤️
       </div>
-      </div>
-</footer>
-
-    </div>
-  )
+    </footer>
+  );
 }
 
-export default Footer
+function SocialIcon({ icon, bg }) {
+  return (
+    <div
+      className={`w-10 h-10 rounded-full ${bg} bg-gradient-to-r flex items-center justify-center text-white cursor-pointer hover:scale-110 transition`}
+    >
+      {icon}
+    </div>
+  );
+}

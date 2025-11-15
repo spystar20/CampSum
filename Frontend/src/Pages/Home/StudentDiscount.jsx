@@ -7,7 +7,9 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Search, Calendar, Percent, MapPin, Bookmark, Filter } from "lucide-react";
+import {
+  Search, Calendar, Percent, MapPin, Bookmark, Filter
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const categories = ["All", "Coaching", "Banking", "Food", "Shopping", "Travel", "Tech"];
@@ -25,7 +27,6 @@ const dummyOffers = [
     category: "Coaching",
     location: "Online + 5 Centers",
     code: "PWSTUDENT50",
-    saved: false,
   },
   {
     id: 2,
@@ -39,7 +40,6 @@ const dummyOffers = [
     category: "Coaching",
     location: "Pan India",
     code: "NEETFREE25",
-    saved: false,
   },
   {
     id: 3,
@@ -53,7 +53,6 @@ const dummyOffers = [
     category: "Banking",
     location: "All Branches",
     code: "SBISTUDENT",
-    saved: false,
   },
   {
     id: 4,
@@ -67,7 +66,6 @@ const dummyOffers = [
     category: "Food",
     location: "Campus Outlets",
     code: "DOMSTUDENT",
-    saved: false,
   },
   {
     id: 5,
@@ -81,21 +79,6 @@ const dummyOffers = [
     category: "Tech",
     location: "Online",
     code: "DELLUNI30",
-    saved: false,
-  },
-  {
-    id: 6,
-    title: "₹500 Off on MakeMyTrip",
-    provider: "MakeMyTrip",
-    logo: "https://logo.clearbit.com/makemytrip.com",
-    discount: "₹500 FLAT",
-    original: "₹3000",
-    discounted: "₹2500",
-    validTill: "Jan 15, 2026",
-    category: "Travel",
-    location: "App Only",
-    code: "MMTSTUDENT",
-    saved: false,
   },
 ];
 
@@ -111,7 +94,8 @@ export default function StudentDiscounts() {
         offer.provider.toLowerCase().includes(searchQuery.toLowerCase()) ||
         offer.code.toLowerCase().includes(searchQuery.toLowerCase());
 
-      const matchesCategory = selectedCategory === "All" || offer.category === selectedCategory;
+      const matchesCategory =
+        selectedCategory === "All" || offer.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     });
@@ -120,78 +104,59 @@ export default function StudentDiscounts() {
   const toggleSave = (offerId) => {
     setSavedOffers((prev) => {
       const newSet = new Set(prev);
-      if (newSet.has(offerId)) {
-        newSet.delete(offerId);
-      } else {
-        newSet.add(offerId);
-      }
+      newSet.has(offerId) ? newSet.delete(offerId) : newSet.add(offerId);
       return newSet;
     });
   };
 
   return (
-    <div className="p-4 sm:p-6 lg:p-8 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
-      {/* Header */}
+    <div className="p-5 sm:p-8 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+
+      {/* HEADER */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -15 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-8"
+        className="text-center mb-10"
       >
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent">
           Student Discounts
         </h1>
-        <p className="mt-2 text-gray-600">Exclusive offers for students — save big!</p>
+        <p className="mt-3 text-gray-600 text-lg">
+          Save smarter with exclusive student offers
+        </p>
       </motion.div>
 
-      {/* Search + Filter */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="max-w-3xl mx-auto mb-8 space-y-5"
-      >
-        {/* Search */}
-        <div className="relative">
-          <Input
-            placeholder="Search offers, brands, codes..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="h-14 pl-14 pr-16 text-lg border-2 border-blue-200 focus:border-blue-500 rounded-full shadow-inner"
-          />
-          <Search className="absolute left-5 top-1/2 -translate-y-1/2 h-6 w-6 text-blue-500" />
-          {searchQuery && (
-            <Button
-              variant="ghost"
-              size="sm"
-              className="absolute right-12 top-1/2 -translate-y-1/2 text-gray-500"
-              onClick={() => setSearchQuery("")}
+      {/* SEARCH */}
+      <div className="max-w-2xl mx-auto mb-8 relative">
+        <Input
+          placeholder="Search discounts, brands or promo codes..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="h-14 pl-14 pr-14 text-lg border-2 border-blue-300 focus:border-blue-500 rounded-full shadow"
+        />
+        <Search className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-600" />
+        <Filter className="absolute right-5 top-1/2 -translate-y-1/2 text-blue-600" />
+      </div>
+
+      {/* CATEGORY TABS */}
+      <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
+        <TabsList className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 max-w-4xl mx-auto bg-white/80 p-2 rounded-xl shadow">
+          {categories.map((cat) => (
+            <TabsTrigger
+              key={cat}
+              value={cat}
+              className="data-[state=active]:bg-blue-600 data-[state=active]:text-white rounded-md text-sm"
             >
-              Clear
-            </Button>
-          )}
-          <Filter className="absolute right-5 top-1/2 -translate-y-1/2 h-6 w-6 text-blue-500" />
-        </div>
+              {cat}
+            </TabsTrigger>
+          ))}
+        </TabsList>
+      </Tabs>
 
-        {/* Category Tabs */}
-        <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-          <TabsList className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-2 h-auto p-2 bg-white/80 backdrop-blur rounded-xl shadow-md">
-            {categories.map((cat) => (
-              <TabsTrigger
-                key={cat}
-                value={cat}
-                className="data-[state=active]:bg-blue-500 data-[state=active]:text-white rounded-lg text-xs sm:text-sm"
-              >
-                {cat}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-        </Tabs>
-      </motion.div>
-
-      {/* Offers Grid */}
+      {/* OFFERS GRID */}
       <motion.div
         layout
-        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10"
       >
         <AnimatePresence mode="popLayout">
           {filteredOffers.map((offer, index) => {
@@ -201,104 +166,96 @@ export default function StudentDiscounts() {
               <motion.div
                 key={offer.id}
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                whileHover={{ y: -6 }}
+                transition={{ duration: 0.35 }}
               >
-                <Card className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col">
-                  {/* Header */}
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <Avatar className="h-10 w-10">
-                          <AvatarImage src={offer.logo} />
-                          <AvatarFallback>{offer.provider[0]}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <p className="font-semibold text-blue-900">{offer.provider}</p>
-                          <Badge className="mt-1 bg-red-400 text-white text-xs">
-                            {offer.category}
-                          </Badge>
-                        </div>
+                <Card className="rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-200/50 bg-white/90 backdrop-blur">
+                  <CardHeader className="pb-4 flex justify-between items-start">
+                    <div className="flex items-center gap-3">
+                      <Avatar className="h-12 w-12 border border-gray-200">
+                        <AvatarImage src={offer.logo} />
+                        <AvatarFallback>{offer.provider[0]}</AvatarFallback>
+                      </Avatar>
+                      <div>
+                        <p className="font-semibold text-gray-900">{offer.provider}</p>
+                        <Badge className="bg-red-400 text-white text-xs mt-1">
+                          {offer.category}
+                        </Badge>
                       </div>
-                      <Button
-                        size="icon"
-                        variant="ghost"
-                        onClick={() => toggleSave(offer.id)}
-                        className="opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <motion.div
-                          animate={{ scale: isSaved ? [1, 1.3, 1] : 1 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Bookmark
-                            className={`h-5 w-5 ${isSaved ? "fill-blue-600 text-blue-600" : "text-gray-400"}`}
-                          />
-                        </motion.div>
-                      </Button>
                     </div>
+
+                    {/* SAVE BUTTON */}
+                    <Button
+                      size="icon"
+                      variant="ghost"
+                      onClick={() => toggleSave(offer.id)}
+                    >
+                      <motion.div
+                        animate={{ scale: isSaved ? [1, 1.3, 1] : 1 }}
+                      >
+                        <Bookmark
+                          className={`h-5 w-5 ${
+                            isSaved ? "text-blue-600 fill-blue-600" : "text-gray-400"
+                          }`}
+                        />
+                      </motion.div>
+                    </Button>
                   </CardHeader>
 
-                  {/* Content */}
-                  <CardContent className="flex-1 space-y-3">
-                    <h3 className="text-lg font-bold text-blue-900 line-clamp-2">
+                  <CardContent className="space-y-4">
+                    {/* TITLE */}
+                    <h3 className="text-xl font-bold text-gray-900">
                       {offer.title}
                     </h3>
 
-                    {/* Pricing */}
+                    {/* DISCOUNT */}
                     <div className="flex items-center gap-3">
-                      <span className="text-2xl font-bold text-red-500">{offer.discount}</span>
+                      <span className="text-3xl font-extrabold text-red-500">
+                        {offer.discount}
+                      </span>
+
                       <div className="text-sm">
                         <span className="line-through text-gray-400">{offer.original}</span>
-                        <span className="ml-2 font-semibold text-green-600">{offer.discounted}</span>
+                        <span className="ml-2 font-bold text-green-600">
+                          {offer.discounted}
+                        </span>
                       </div>
                     </div>
 
-                    {/* Details */}
-                    <div className="space-y-1 text-xs text-gray-600">
+                    {/* DETAILS */}
+                    <div className="space-y-1 text-sm text-gray-600">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-3 w-3 text-blue-500" />
-                        Valid till: <span className="font-medium">{offer.validTill}</span>
+                        <Calendar className="h-4 w-4 text-blue-500" />
+                        Valid till: <strong>{offer.validTill}</strong>
                       </div>
+
                       <div className="flex items-center gap-1">
-                        <MapPin className="h-3 w-3 text-red-500" />
+                        <MapPin className="h-4 w-4 text-red-500" />
                         {offer.location}
                       </div>
                     </div>
 
-                    {/* Promo Code */}
-                    <div className="mt-3 p-3 bg-gradient-to-r from-blue-50 to-red-50 rounded-lg border border-blue-200">
+                    {/* PROMO CODE */}
+                    <div className="p-4 bg-gradient-to-r from-blue-50 to-red-50 rounded-lg border border-blue-200">
                       <p className="text-xs text-gray-600">Use Code:</p>
-                      <p className="font-mono font-bold text-blue-700">{offer.code}</p>
+                      <p className="font-mono font-semibold text-blue-700 text-lg">
+                        {offer.code}
+                      </p>
                     </div>
-                  </CardContent>
 
-                  {/* CTA */}
-                  <div className="px-6 pb-5">
-                    <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl">
-                      <Percent className="h-5 w-5 mr-2" />
-                      Grab Offer
+                    {/* CTA */}
+                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 mt-2 rounded-xl">
+                      <Percent className="h-5 w-5 mr-2" /> Grab Offer
                     </Button>
-                  </div>
+                  </CardContent>
                 </Card>
               </motion.div>
             );
           })}
         </AnimatePresence>
       </motion.div>
-
-      {/* Empty State */}
-      {filteredOffers.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-16"
-        >
-          <p className="text-xl text-gray-500">No offers found. Try different filters!</p>
-        </motion.div>
-      )}
     </div>
   );
 }
