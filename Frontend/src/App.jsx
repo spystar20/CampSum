@@ -6,7 +6,7 @@ import Footer from './Components/Footer';
 import SideMenu from './Components/SideMenu';
 import Accomendation from './Pages/Home/Accomendation';
 import Campusbazzar from './Pages/Home/Campusbazzar';
-import  StudentBlog  from './Pages/Home/Cms';
+import  StudentBlog  from './Pages/Home/Blogs';
 
 import EventsUpdates from './Pages/Home/EventsUpdates';
 import  LostAndFoundList  from './Pages/Home/LostAndFound';
@@ -20,6 +20,8 @@ import { TiffinServicesList } from './Pages/Home/TiffinServices';
 import NotFoundPage from './Pages/NotFound/NotFound';
 import Login from './Pages/AuthPages/Login';
 import Signup from './Pages/AuthPages/SignUp';
+import BookMarket from './Pages/Home/BooksMarket';
+import JobsPortal from './Pages/Home/JobMarket';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +46,8 @@ const App = () => {
           <Route path="/campusbazzar" element={<Campusbazzar />} />
           <Route path="/cms" element={<StudentBlog />} />
           <Route path="/community" element={<CommunityFeed />} />
+          <Route path="/bookmarket" element={<BookMarket />} />
+          <Route path="/jobmarket" element={<JobsPortal />} />
           <Route path="/eventsupdates" element={<EventsUpdates />} />
           <Route path="/lostandfound" element={<LostAndFoundList />} />
           <Route path="/mentalhealthsupport" element={<MentalHealthSupportList />} />

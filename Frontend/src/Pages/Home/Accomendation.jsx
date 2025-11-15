@@ -41,7 +41,7 @@ export default function Accommodation() {
           Available Properties
         </h2>
 
-        <button className="px-5 py-2.5 rounded-xl shadow-md text-white text-sm font-medium bg-gradient-to-r from-blue-500 to-blue-600 hover:opacity-90 transition">
+        <button className="px-5 py-2.5 rounded-xl shadow-md text-white text-sm font-medium bg-linear-to-r from-blue-500 to-blue-600 hover:opacity-90 transition">
           Request a Room
         </button>
       </div>
@@ -88,7 +88,7 @@ export default function Accommodation() {
               </div>
 
               {/* Button */}
-              <button className="w-full py-2.5 mt-3 rounded-xl text-white shadow bg-gradient-to-r from-red-400 to-blue-500 hover:opacity-90 font-medium text-sm transition">
+              <button className="w-full py-2.5 mt-3 rounded-xl text-white shadow bg-linear-to-r from-red-400 to-blue-500 hover:opacity-90 font-medium text-sm transition">
                 View Details
               </button>
             </div>
