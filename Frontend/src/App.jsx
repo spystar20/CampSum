@@ -17,6 +17,9 @@ import StudentDiscount from './Pages/Home/StudentDiscount';
 
 import CommunityFeed from './Pages/Home/Community';
 import { TiffinServicesList } from './Pages/Home/TiffinServices';
+import NotFoundPage from './Pages/NotFound/NotFound';
+import Login from './Pages/AuthPages/Login';
+import Signup from './Pages/AuthPages/SignUp';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +37,9 @@ const App = () => {
           <Route path="/" element={<Home />} />
           {/* <Route path="/about-us" element={<A />} /> */}
           {/* <Route path="/contact-us" element={<Conta />} /> */}
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup/>} />
           <Route path="/accomendation" element={<Accomendation />} />
           <Route path="/campusbazzar" element={<Campusbazzar />} />
           <Route path="/cms" element={<StudentBlog />} />
@@ -45,6 +51,7 @@ const App = () => {
           <Route path="/roommatefinder" element={<RoommateFinderList />} />
           <Route path="/studentdiscount" element={<StudentDiscount />} />
           <Route path="/tiffinservices" element={<TiffinServicesList />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
         <Footer />
       </Router>

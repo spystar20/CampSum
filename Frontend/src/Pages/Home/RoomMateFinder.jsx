@@ -95,7 +95,7 @@ export default function RoommateFinderList() {
               </div>
 
               {/* Button */}
-              <Button className="w-full mt-5 bg-gradient-to-r from-red-400 to-blue-400 text-white font-medium rounded-xl shadow-md hover:opacity-90">
+              <Button className="w-full mt-5 bg-linear-to-r from-red-400 to-blue-400 text-white font-medium rounded-xl shadow-md hover:opacity-90">
                 Contact Now
               </Button>
             </CardContent>

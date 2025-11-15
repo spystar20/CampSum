@@ -16,8 +16,8 @@ const Navbar = ({ onMenuClick }) => {
         </li></Link>
       </ul>
       <div className='hidden md:flex gap-3 justify-between items-center'>
-        <button className='bg-[#48BAFC] hover:bg-[#1B98E0] cursor-pointer px-8 py-2 text-lg font-semibold rounded-3xl hover:scale-95 text-white transition-all ease-in duration-150' >Log In </button>
-        <button className='border-2 text-white  border-[#48BAFC] hover:bg-[#48BAFC] cursor-pointer px-8 py-2 text-lg font-semibold rounded-3xl hover:scale-95 transition-all ease-in duration-150'>Sign Up</button>
+      <Link to={"/login"}>  <button className='bg-[#48BAFC] hover:bg-[#1B98E0] cursor-pointer px-8 py-2 text-lg font-semibold rounded-3xl hover:scale-95 text-white transition-all ease-in duration-150' >Log In </button></Link>
+       <Link to={"/singup"}> <button className='border-2 text-white  border-[#48BAFC] hover:bg-[#48BAFC] cursor-pointer px-8 py-2 text-lg font-semibold rounded-3xl hover:scale-95 transition-all ease-in duration-150'>Sign Up</button></Link>
       </div>
       <div className='md:hidden'>
         <button onClick={onMenuClick} className="text-white">

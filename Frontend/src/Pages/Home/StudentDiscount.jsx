@@ -110,7 +110,7 @@ export default function StudentDiscounts() {
   };
 
   return (
-    <div className="p-5 sm:p-8 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+    <div className="p-5 sm:p-8 bg-linear-to-br from-blue-50 via-white to-red-50 min-h-screen">
 
       {/* HEADER */}
       <motion.div
@@ -118,7 +118,7 @@ export default function StudentDiscounts() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-10"
       >
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-red-500 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-extrabold bg-linear-to-r from-blue-600 to-red-500 bg-clip-text text-transparent">
           Student Discounts
         </h1>
         <p className="mt-3 text-gray-600 text-lg">
@@ -238,7 +238,7 @@ export default function StudentDiscounts() {
                     </div>
 
                     {/* PROMO CODE */}
-                    <div className="p-4 bg-gradient-to-r from-blue-50 to-red-50 rounded-lg border border-blue-200">
+                    <div className="p-4 bg-linear-to-r from-blue-50 to-red-50 rounded-lg border border-blue-200">
                       <p className="text-xs text-gray-600">Use Code:</p>
                       <p className="font-mono font-semibold text-blue-700 text-lg">
                         {offer.code}

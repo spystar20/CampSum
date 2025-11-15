@@ -60,7 +60,7 @@ export default function MarketplaceGrid() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-50 via-white to-red-50 min-h-screen">
+    <div className="p-6 bg-linear-to-br from-blue-50 via-white to-red-50 min-h-screen">
 
       {/* 🔍 Search */}
       <div className="max-w-3xl mx-auto mb-8 relative">
@@ -146,7 +146,7 @@ export default function MarketplaceGrid() {
                   </p>
                 </CardContent>
 
-                <CardFooter className="flex justify-between items-center border-t bg-gradient-to-r from-blue-50 to-red-50 mt-auto">
+                <CardFooter className="flex justify-between items-center border-t bg-linear-to-r from-blue-50 to-red-50 mt-auto">
                   <p className="text-2xl font-bold text-red-400">${product.price}</p>
 
                   <Button className="bg-blue-400 hover:bg-blue-500 text-white rounded-xl px-5">
