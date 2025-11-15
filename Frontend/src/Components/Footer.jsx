@@ -71,7 +71,7 @@ export default function Footer() {
 function SocialIcon({ icon, bg }) {
   return (
     <div
-      className={`w-10 h-10 rounded-full ${bg} bg-gradient-to-r flex items-center justify-center text-white cursor-pointer hover:scale-110 transition`}
+      className={`w-10 h-10 rounded-full ${bg} bg-linear-to-r flex items-center justify-center text-white cursor-pointer hover:scale-110 transition`}
     >
       {icon}
     </div>

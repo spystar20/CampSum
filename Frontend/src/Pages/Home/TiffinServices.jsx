@@ -13,7 +13,7 @@ export const tiffinServices = [
     description:
       "Homemade food delivered daily. Includes dal, sabzi, roti, rice, salad & special dish on weekends.",
     image:
-      "https://images.unsplash.com/photo-1601050690597-df1144cfa4d3?auto=format&fit=crop&w=800&q=60",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgz7wk9B3zvmZeHxwU5wUpOipiaXEcO5uzRA&s",
     location: "Lanka, Varanasi",
     price: "₹2,500 / month",
     rating: 4.7,
