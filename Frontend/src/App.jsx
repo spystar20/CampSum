@@ -19,9 +19,10 @@ import CommunityFeed from './Pages/Home/Community';
 import { TiffinServicesList } from './Pages/Home/TiffinServices';
 import NotFoundPage from './Pages/NotFound/NotFound';
 import Login from './Pages/AuthPages/Login';
-import Signup from './Pages/AuthPages/SignUp';
+
 import BookMarket from './Pages/Home/BooksMarket';
 import JobsPortal from './Pages/Home/JobMarket';
+import Signup from './Pages/AuthPages/SignUp';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
