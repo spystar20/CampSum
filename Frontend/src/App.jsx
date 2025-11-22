@@ -23,6 +23,8 @@ import Login from './Pages/AuthPages/Login';
 import BookMarket from './Pages/Home/BooksMarket';
 import JobsPortal from './Pages/Home/JobMarket';
 import Signup from './Pages/AuthPages/SignUp';
+import CampsumAdmin from './Pages/DummyAdmin';
+import SuperAdminDashboard from './Pages/SuperAdmin';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,7 +58,10 @@ const App = () => {
           <Route path="/roommatefinder" element={<RoommateFinderList />} />
           <Route path="/studentdiscount" element={<StudentDiscount />} />
           <Route path="/tiffinservices" element={<TiffinServicesList />} />
+          
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="/admin" element={<CampsumAdmin />} />
+          <Route path="/superAdmin" element={<SuperAdminDashboard />} />
         </Routes>
         <Footer />
       </Router>
