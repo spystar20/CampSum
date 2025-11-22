@@ -131,18 +131,22 @@ const Home = () => {
               </div>
             </motion.div>
           </Link>
+            <Link to='/campusbazzar' >
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/736x/f5/98/37/f598376ed7baf8eba373ad9def70c2e7.jpg" alt="" />
             </div>
-            <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+         <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
               <span className='text-left capitalize flex flex-col gap-1'>
-                <h6 className='text-lg font-semibold'>Marketplace</h6>
+                <h6 className='text-lg font-semibold'>Campus Bazaar</h6>
                 <p className='text-xs'>Buy, sell, and exchange items with fellow students</p>
               </span>
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
+
           </motion.div>
+          </Link>
+        <Link to='/mentalhealthsupport'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/736x/73/16/97/731697342b5b04cba8ca116028bf6012.jpg" alt="" />
@@ -155,6 +159,8 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
+          <Link to='/lostandfound'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/1e/a2/6d/1ea26dc520337a320781557786eb2597.jpg" alt="" />
@@ -167,6 +173,8 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
+          <Link to='/roommatefinder'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/a2/c3/0d/a2c30db5b264b69e7583cf64838fbfec.jpg" alt="" />
@@ -179,9 +187,11 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
+          <Link to='/cms'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
-              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/a2/c3/0d/a2c30db5b264b69e7583cf64838fbfec.jpg" alt="" />
+              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/c0/f8/6d/c0f86d17fb7a33d14e655e5bf2cb9ec0.jpg" alt="" />
             </div>
             <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
               <span className='text-left capitalize flex flex-col gap-1'>
@@ -191,9 +201,11 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
+          <Link to='/raktconnect'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
-              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https.pinimg.com/1200x/c9/d3/de/c9d3deb19915ad48a363a460f2a9bd76.jpg" alt="" />
+              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/c9/d3/de/c9d3deb19915ad48a363a460f2a9bd76.jpg" alt="" />
             </div>
             <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
               <span className='text-left capitalize flex flex-col gap-1'>
@@ -203,6 +215,8 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
+          <Link to='/studentdiscount'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/12/22/31/122231d3137e5eb5c804b13465d208f2.jpg" alt="" />
@@ -215,6 +229,51 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>explore</button></span>
             </div>
           </motion.div>
+          </Link>
+             <Link to='/community'>
+          <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
+            <div className='row-start-1 col-start-1'>
+              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/736x/e0/15/1d/e0151d2c4ed12a619f3fa245cf4d5470.jpg" alt="" />
+            </div>
+            <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+              <span className='text-left capitalize flex flex-col gap-1'>
+                <h6 className='text-lg font-semibold'>Community</h6>
+                <p className='text-xs'>Community built to connect students online</p>
+              </span>
+              <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>explore</button></span>
+            </div>
+          </motion.div>
+          </Link>
+           <Link to='/bookmarket'>
+          <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
+            <div className='row-start-1 col-start-1'>
+              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/c0/a4/6a/c0a46adcad4edab33015083555e66971.jpg" alt="" />
+            </div>
+            <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+              <span className='text-left capitalize flex flex-col gap-1'>
+                <h6 className='text-lg font-semibold'>Book Market</h6>
+                <p className='text-xs'>Shop trending books and deals on our online market</p>
+              </span>
+              <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>explore</button></span>
+            </div>
+          </motion.div>
+          </Link>
+              <Link to='/jobmarket'>
+          <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
+            <div className='row-start-1 col-start-1'>
+              <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/736x/ac/86/f1/ac86f183eed2ac3eec808dcb5ea373d2.jpg" alt="" />
+            </div>
+            <div className='flex justify-between items-center gap-4 row-start-1 col-start-1 text-white relative bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl py-5 px-3 shadow-lg capitalize'>
+              <span className='text-left capitalize flex flex-col gap-1'>
+                <h6 className='text-lg font-semibold'>Job Market</h6>
+                <p className='text-xs'>Explore latest jobs for students in our job market</p>
+              </span>
+              <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'>explore</button></span>
+            </div>
+          </motion.div>
+          </Link>
+          
+          <Link to='/eventsupdates'>
           <motion.div className='grid items-end capitalize' variants={itemVariants} whileHover="hover">
             <div className='row-start-1 col-start-1'>
               <img className='rounded-2xl aspect-3/2 w-full h-full object-cover' src="https://i.pinimg.com/1200x/cb/7b/c9/cb7bc9d4fffcfac5aef3c6bb35f7c118.jpg" alt="" />
@@ -227,6 +286,7 @@ const Home = () => {
               <span><button className='border border-white/30 capitalize hover:bg-white/10 px-6 py-3 rounded-xl font-semibold transition-all cursor-pointer'> explore </button></span>
             </div>
           </motion.div>
+          </Link>
         </motion.div>
       </div>
       <section className="py-20 bg-linear-to-r from-[#48BAFC] via-[#2C8EE8] to-[#1B6CC9] text-white text-center">
